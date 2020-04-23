@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Joi from "joi-browser";
-import Logo from "./img/logo.png";
+
 
 class LoginForm extends Component {
   state = {
