@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Student List</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        tr:nth-child(2) {
+            background-color: rgb(62, 226, 62);
+        }
+        tr:nth-child(3) {
+            background-color: rgb(62, 226, 62);
+        }
+        tr:nth-child(4) {
+            background-color: rgb(62, 226, 62);
+        }
+        tr:nth-child(5) {
+            background-color: rgb(62, 226, 62);
+        }
+        tr:nth-child(6) {
+            background-color: rgb(62, 226, 62);
+        }
+
+        tr:nth-child(3) {
+            background-color: rgb(250, 78, 78);
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default" style="background-color:#00263E">
+        <ul class="navbar-nav">
+            <img src="images/logo.png" width="auto" height="36">
+        </ul>
+        <!-- Links -->
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Logout</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container-fluid text-center" id="table-contents">
+            <h1>Advisees</h1>
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <table id="table">
+                        <tr>
+                            <th>Student</th>
+                            <th>Major</th>
+                            <th>Year</th>
+
+                        </tr>
+                        <tr class="clickable-row" data-href="courseValidatorValid.html">
+                            <td>Brian Carballo</td>
+                            <td>Software Engineering</td>
+                            <td>Junior</td>
+
+                        </tr>
+                        <tr class="clickable-row" data-href="courseValidatorInvalid.html">
+                            <td>Kevin Sangurima</td>
+                            <td>Software Engineering</td>
+                            <td>Junior</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="courseValidatorValid.html">
+                            <td>James Jacobson</td>
+                            <td>Software Engineering</td>
+                            <td>Junior</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="courseValidatorValid.html">
+                            <td>Phillip Nam</td>
+                            <td>Software Engineering</td>
+                            <td>Junior</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="courseValidatorValid.html">
+                            <td>Ryan Clark</td>
+                            <td>Computer Science</td>
+                            <td>Junior</td>
+                        </tr>
+                    </table>
+                    <button class="btn btn-sm round" id="Add-Student" data-toggle="modal" data-target="#myModal">Add
+                        Student</button>
+                    
+                    <div class="container" id="Schedule-Input">
+                        <h1>Add Schedules</h1>
+                            <input type="file">
+                    </div>
+                   
+                     
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="footer fixed-bottom">
+        <p>QU - 2019</p>
+        <p></p>
+    </div>
+</body>
+
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Create Student</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="inputName">Student Name</label>
+                            <input class="form-control" id="inputName" placeholder="Enter Name">
+                        </div>
+                        <label for="inputEmail">Student Email address</label>
+                        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
+                            placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">Please verify email before creating
+                            account.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Temporary Password</label>
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    </div>
+                </form>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Create</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+
+<script>jQuery(document).ready(function ($) {
+        $(".clickable-row").click(function () {
+            window.location = $(this).data("href");
+        });
+    }); 
+</script>
+
+
+</html>
+
+
+<body>
+
+</body>
+
+</html>

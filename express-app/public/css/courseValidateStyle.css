@@ -1,0 +1,43 @@
+*{
+	margin:0;
+    padding:0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+/*BOOSTRAPMADE Logo located at the top*/
+.logo {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 20px;
+    padding-right: 10px;
+    border-right: 1px solid rgba(211, 211, 211, 0.623);
+    background-color: white;
+}
+
+.navbar {
+    background-color: #00263E;
+}
+
+.navbar-text {
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #7F7F7F;
+}
+
+.footer {
+    width: 100%;
+    height: fit-content;
+    background-color: #00263E;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+li{
+    border-radius: 40px;
+}
+
+#comment-section{
+    margin-top: 100px; 
+}
+

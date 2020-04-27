@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="script.js"></script>
+
+    <title>Index Page</title>
+</head>
+<body>
+
+    <!--Logo-->
+
+        <div class="logo" style="background-color:#00263E" align="center">
+            <img src="images/logo.png" alt="Site Logo" width="auto" height="50">
+        </div>
+    
+
+    <header id="home-section">
+        <div class="dark-overlay">
+            <div class=container id="centerPage">
+            <div class="container">
+        <label><h2><b>Advising System Login</b></h2></label>
+    </div>
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" id="userin" required>
+
+      <label for="psw" style="margin-left: 15px"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="passin" required>
+
+      <button type="submit" onclick="validate()" style="margin-left: 15px" class="btn btn-sm round" id="loginButton">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-left: 8px"> Remember me
+      </label>  
+      <span class="psw" style="padding-left: 15px"><a href="#">Forgot password?</a></span>
+    
+</div>
+    
+
+        </div>
+    </header>
+
+    <div class="footer fixed-bottom">
+        <p>QU - 2019</p>
+        <p></p>
+    </div>
+<script>
+	//The following script is so it allows the user to hit the enter button when done inputting their password
+	// Get the input field
+var input = document.getElementById("passin");
+
+// Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("loginButton").click();
+  }
+});
+</script>
+
+</body>
+</html>
