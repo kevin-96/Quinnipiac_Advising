@@ -2,14 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+
+import "bootstrap/dist/css/bootstrap.css";
 import * as serviceWorker from './serviceWorker';
-import CourseAddedDisplay from './components/addCourse';
-import AddedCourses from './components/addedCourses';
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <CourseAddedDisplay/>
-  </React.StrictMode>,
+
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+
   document.getElementById('root')
 );
 

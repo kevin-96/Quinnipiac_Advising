@@ -6,8 +6,56 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+*{
+	margin:0;
+    padding:0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.logo {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 20px;
+  padding-right: 10px;
+  border-right: 1px solid rgba(211, 211, 211, 0.623);
+  background-color: white;
+}
+.footer {
+  width: 100%;
+  height: fit-content;
+  background-color: #00263E;
+  color: white;
+  font-size: 22px;
+  text-align: center;
+}
+/*Contains the background image*/
+#home-section {
+  background: url(./img/quad.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 890px;
+}
+
+/*Responsible for making the background image darker*/
+#home-section .dark-overlay {
+  position: absolute;
+  top: auto;
+  left: 0;
+  width: 100%;
+  min-height: 890px;
+  background: rgba(0, 0, 0, 0.3);
+  padding-top: 150px;
+}
+#centerPage{
+background: #ffffffdd;
+padding: 25px;
+border-radius: 30px;
+width: 50%;
+}
+
+
