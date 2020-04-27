@@ -5,12 +5,15 @@ import App from './App';
 
 import "bootstrap/dist/css/bootstrap.css";
 import * as serviceWorker from './serviceWorker';
+//import CourseAddedDisplay from './components/addCourse';
+
 import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
 
   <BrowserRouter>
     <App />
+ // <CourseAddedDisplay/>
   </BrowserRouter>,
 
   document.getElementById('root')
