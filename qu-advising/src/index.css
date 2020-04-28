@@ -28,7 +28,7 @@ code {
   height: fit-content;
   background-color: #00263E;
   color: white;
-  font-size: 22px;
+  font-size: 20px;
   text-align: center;
 }
 /*Contains the background image*/
@@ -58,4 +58,74 @@ border-radius: 30px;
 width: 50%;
 }
 
+#jumbotron-advisor{
+  background: url(./img/page.png);
+  background-size: cover;
+  min-height: 1090px;
+}
 
+#table{
+  margin-top: 10%;
+  background-color: aliceblue;
+}
+
+#Add-Student{
+  margin: 20px;
+  padding: 6px;
+  
+}
+
+.btn-sm.round{
+  width: 100px;
+  border-radius: 24px;
+  background-color: aliceblue;
+  border-width: .25px;
+  border-color: #00263E;
+  font-size: medium;
+  text-align: center;
+}
+
+tr.clickable-row:hover{
+  background-color: #00263E;
+  color: aliceblue;
+}
+
+#Schedule-Input{
+ margin-top: 60px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tr:nth-child(2) {
+  background-color: rgb(62, 226, 62);
+}
+tr:nth-child(3) {
+  background-color: rgb(62, 226, 62);
+}
+tr:nth-child(4) {
+  background-color: rgb(62, 226, 62);
+}
+tr:nth-child(5) {
+  background-color: rgb(62, 226, 62);
+}
+tr:nth-child(6) {
+  background-color: rgb(62, 226, 62);
+}
+
+tr:nth-child(3) {
+  background-color: rgb(250, 78, 78);
+}

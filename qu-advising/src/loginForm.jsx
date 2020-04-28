@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Footer from "./components/footer";
+import Header from "./components/header";
 import Joi from "joi-browser";
 
 
@@ -49,6 +51,7 @@ class LoginForm extends Component {
   render() {
     return (
       <header id="home-section">
+        <Header/>
 		<div className="dark-overlay">
     <div className="container" id="centerPage">
 				<div className="container">
@@ -98,6 +101,7 @@ class LoginForm extends Component {
       </div>
       </div>
       </div>
+      <Footer/>
 		</header>
     );
   }
