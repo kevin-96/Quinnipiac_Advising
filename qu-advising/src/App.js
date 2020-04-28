@@ -22,6 +22,7 @@ import './App.css';
         <Redirect to="/not-found" />
         
       </Switch>
+
       </BrowserRouter>
       </React.Fragment>
     
