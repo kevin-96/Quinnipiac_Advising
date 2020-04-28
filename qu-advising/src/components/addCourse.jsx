@@ -26,8 +26,7 @@ class CourseAddedDisplay extends Component {
           <form>
             <div class="row">
               <div class="col-lg-6">
-                <CourseDropdown onClick={this.handleClick}
-                              />
+                <CourseDropdown onClick={this.handleClick}/>
               </div>
               <AddedCourses coursesAdded={this.state.addedCourses}/>
             </div>
