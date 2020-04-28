@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import ClassRow from "./classRow";
+import Header from "./header";
+import Navbar from "./navbar";
+import Footer from "./footer";
 
 class CourseValidatorDisplay extends Component {
     constructor(props) {
@@ -12,14 +15,17 @@ class CourseValidatorDisplay extends Component {
 
     render() {
         return (
-            <div class="container">
+            <div>
+            <Navbar/>
+            <div class="jumbotron" id="backgroundImage">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">Class Validator</h1>
+                </div>
+            </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="text-center">Class Validator</h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -37,6 +43,9 @@ class CourseValidatorDisplay extends Component {
                         </table>
                     </div>
                 </div>
+            </div>
+            </div>
+            <Footer/>
             </div>
         );
     }

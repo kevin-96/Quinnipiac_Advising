@@ -3,6 +3,8 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import NotFound from "./components/notFound";
 import StudentList from "./components/studentList";
 import LoginForm from "./loginForm";
+import CourseAdderDisplay from "./components/addCourse";
+import CourseValidatorDisplay from "./components/courseValidatorDisplay";
 
 import './App.css';
 
@@ -11,7 +13,7 @@ import './App.css';
     return (
       <React.Fragment>
       <Switch>
-        <Route path="/" component={LoginForm}></Route>
+        <Route path="/" component={CourseAdderDisplay}></Route>
         <Route path="/not-found" component={NotFound}></Route>
         <Redirect to="/not-found" />
       </Switch>

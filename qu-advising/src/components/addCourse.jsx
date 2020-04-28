@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import CourseDropdown from './courseDropdown';
 import AddedCourses from './addedCourses'
+
+import Footer from "./footer";
+import Navbar from "./navbar";
 class CourseAddedDisplay extends Component {
   constructor(props){
     super(props)
@@ -15,7 +18,9 @@ class CourseAddedDisplay extends Component {
 
   render() {
     return (
-      <div class="jumbotron">
+      <div>
+        <Navbar/>
+      <div class="jumbotron" id="backgroundImage">
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
@@ -33,6 +38,8 @@ class CourseAddedDisplay extends Component {
           </form>
         </div>
       </div >
+      <Footer/>
+      </div>
     );
   }
 }

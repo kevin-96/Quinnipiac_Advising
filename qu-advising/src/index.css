@@ -58,10 +58,10 @@ border-radius: 30px;
 width: 50%;
 }
 
-#jumbotron-advisor{
+#backgroundImage{
   background: url(./img/page.png);
   background-size: cover;
-  min-height: 1090px;
+  min-height: 870px;
 }
 
 #table{
@@ -72,7 +72,6 @@ width: 50%;
 #Add-Student{
   margin: 20px;
   padding: 6px;
-  
 }
 
 .btn-sm.round{
