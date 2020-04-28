@@ -9,7 +9,7 @@ class Navbar extends Component {
         return ( 
             <nav class="navbar navbar-default" style={{backgroundColor:"#00263E"}}>
                <ul class="navbar-nav">
-                <img src={Logo} width="auto" height="36"></img>
+                <img src={Logo} width="auto" height="36" alt=""></img>
             </ul>
             <ul class="nav navbar-nav navbar-right">
             <li class="nav-item">

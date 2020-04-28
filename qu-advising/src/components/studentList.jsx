@@ -10,7 +10,7 @@ class StudentList extends Component{
         return ( 
             <div id="advisor-bg">
             <Navbar/>
-            <div class="jumbotron" id="jumbotron-advisor">
+            <div class="jumbotron" id="backgroundImage">
         <div class="container-fluid text-center" id="table-contents">
             <h1>Advisees</h1>
             <div class="row">

@@ -11,7 +11,7 @@ class ClassRow extends Component {
         agreedCourse: "",
     };
     render() {
-        if (this.state.studentCourse == this.state.agreedCourse) {
+        if (this.state.studentCourse === this.state.agreedCourse) {
             return (
                 <tr style={{backgroundColor:"green"}}>
                     <td> {this.state.agreedCourse}</td>
