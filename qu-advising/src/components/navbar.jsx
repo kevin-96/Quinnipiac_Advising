@@ -16,8 +16,6 @@ class Navbar extends Component {
                 <a class="nav-link" href="index.html">Logout</a>
             </li>
         </ul>
-
-
             </nav>
          );
     }
