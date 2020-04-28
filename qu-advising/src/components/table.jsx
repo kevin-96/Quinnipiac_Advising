@@ -4,14 +4,14 @@ class Table extends Component {
         super(props);
         this.state = { 
             students: [
-               { id: 1, name: 'Brian ', major: 'Software Engineering', year: 'Junior' },
-               { id: 2, name: 'Brian Carballo', major: 'Software Engineering', year: 'Junior' },
-               { id: 3, name: 'Brian ', major: 'Software Engineering', year: 'Junior' },
-               { id: 4, name: 'Brian Carballo', major: 'Software Engineering', year: 'Junior' },
-               { id: 4, name: 'Brian Carballo', major: 'Software Engineering', year: 'Junior' },
-               { id: 4, name: 'Brian Carballo', major: 'Software Engineering', year: 'Junior' },
-               { id: 4, name: 'Brian Carballo', major: 'Software Engineering', year: 'Junior' },
-               { id: 4, name: 'Brian Carballo', major: 'Software Engineering', year: 'Junior' },
+               { id: 1, name: 'Brian ', major: 'Software Engineering', year: 'Junior', valid: true},
+               { id: 2, name: 'Brian Carballo', major: 'Software Engineering', year: 'Junior', valid: true },
+               { id: 3, name: 'Brian ', major: 'Software Engineering', year: 'Junior', valid: true},
+               { id: 4, name: 'Brian Carballo', major: 'Software Engineering', year: 'Junior', valid: true},
+               { id: 4, name: 'Brian Carballo', major: 'Software Engineering', year: 'Junior', valid: true},
+               { id: 4, name: 'Brian Carballo', major: 'Software Engineering', year: 'Junior', valid: true},
+               { id: 4, name: 'Brian Carballo', major: 'Software Engineering', year: 'Junior', valid: false},
+               { id: 4, name: 'Brian Carballo', major: 'Software Engineering', year: 'Junior', valid: true},
               
             ]
          }
@@ -19,14 +19,26 @@ class Table extends Component {
 
     renderTableData() {
         return this.state.students.map((student, index) => {
-           const {id,name,major,year} = student //destructuring
-           return (
-              <tr>
-                 <td>{name}</td>
-                 <td>{major}</td>
-                 <td>{year}</td>
-              </tr>
-           )
+           const {id,name,major,year,valid} = student 
+           if(valid){
+            return (
+               <tr style={{backgroundColor:"green"}}>
+                  <td>{name}</td>
+                  <td>{major}</td>
+                  <td>{year}</td>
+               </tr>
+            )
+           }
+           else {
+              return (
+               <tr style={{backgroundColor:"red"}}>
+               <td>{name}</td>
+               <td>{major}</td>
+               <td>{year}</td>
+               </tr>
+              )
+           }
+           
         })
      }
     render() { 
