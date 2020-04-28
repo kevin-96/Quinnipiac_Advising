@@ -3,15 +3,24 @@ import ClassRow from "./classRow";
 import Header from "./header";
 import Navbar from "./navbar";
 import Footer from "./footer";
+import {
+    getStudent
+  } from "../services/userService";
 
 class CourseValidatorDisplay extends Component {
     constructor(props) {
         super(props)
     }
     state = {
-        studentCourses: ["SER230","SER330"],
-        agreedCourses: ["SER240","SER330"]
+        studentCourses: [{courseNumber:"SER420"}],
+        agreedCourses: [{courseNumber:"SER69"}]
     };
+
+    async componentDidMount() {
+    //Last step, get advisors schedule
+        const { data } = await getStudent("102513");
+        this.setState({studentCourses:data[0].schedule.courses,agreedCourses:data[0].schedule.courses});
+      }
 
     render() {
         return (
@@ -35,8 +44,8 @@ class CourseValidatorDisplay extends Component {
                             </thead>
                             <tbody id="table_classes">
                                 {this.state.agreedCourses.map((val, index) => (
-                                    <ClassRow studentCourse={this.state.studentCourses[index]}
-                                        agreedCourse={this.state.agreedCourses[index]} />
+                                    <ClassRow studentCourse={this.state.studentCourses[index].courseNumber}
+                                        agreedCourse={this.state.agreedCourses[index].courseNumber} />
                                 ))}
                     </tbody>
 

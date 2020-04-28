@@ -2,6 +2,7 @@ import React, { Component } from "react";
 class ClassRow extends Component {
     constructor(props) {
         super(props);
+        console.log(props);
         this.state=({studentCourse : this.props.studentCourse , 
             agreedCourse : this.props.agreedCourse});
         console.log(this.state.studentCourse);

@@ -12,11 +12,13 @@ import './App.css';
     
     return (
       <React.Fragment>
-      <Switch>
-        <Route path="/" component={CourseAdderDisplay}></Route>
+        
+        <Switch>
+        <Route path="/schedule/:id" component={CourseValidatorDisplay}/>
         <Route path="/not-found" component={NotFound}></Route>
         <Redirect to="/not-found" />
       </Switch>
+      
       </React.Fragment>
     
  );
