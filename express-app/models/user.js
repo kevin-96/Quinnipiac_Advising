@@ -1,6 +1,7 @@
 var schedule = require("./schedule");
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+var passportLocalMongoose = require("passport-local-mongoose");
 
 
 var userSchema = new Schema(
@@ -44,6 +45,13 @@ var userSchema = new Schema(
 {
 	timestamps: true
 });
+
+//an instance method added here to return fullname of the user
+userSchema.methods.getName = function () {
+	return this.firstname + " " + this.lastname;
+  };
+  userSchema.plugin(passportLocalMongoose); //adds the user hash and salt fileds to store the user name, the hashed password and salted value
+  
 
 var user = mongoose.model("user", userSchema);
 module.exports = user;
