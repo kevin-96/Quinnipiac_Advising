@@ -29,7 +29,7 @@ router.post("/register", function (req, res) {
         lastName: req.body.lastName,
         id: req.body.id,
         isStudent: req.body.isStudent,
-        
+        password: req.body.password
     }),
     req.body.password,
     function (err, user) {
@@ -59,15 +59,18 @@ router.post("/login", (req, res, next) => {
       return res.status(401).json({ err: info });
     }
     req.logIn(user, function (err) {
-        console.log(err);
+      
       if (err) return res.status(500).json({ err: "Could not log in user" });
 
       console.log("User in users: ", user);
 
-      var token = Verify.getToken(user);
+      
+     var token = Verify.getToken(user);
+     console.log("this is kev: " + token);
 
       res.status(200);
-      res.send(token);
+      res.send(token); 
+    //  res.send({status: "success"});
     });
   })(req, res, next);
 });

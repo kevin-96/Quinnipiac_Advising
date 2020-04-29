@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Logo from '../img/logo.png';
+import { NavLink } from "react-router-dom";
 class Navbar extends Component {
     constructor(props) {
         super(props);
@@ -7,13 +8,15 @@ class Navbar extends Component {
     }
     render() { 
         return ( 
-            <nav class="navbar navbar-default" style={{backgroundColor:"#00263E"}}>
-               <ul class="navbar-nav">
+            <nav className="navbar navbar-default" style={{backgroundColor:"#00263E"}}>
+               <ul className="navbar-nav">
                 <img src={Logo} width="auto" height="36" alt=""></img>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">Logout</a>
+            <ul className="nav navbar-nav navbar-right">
+            <li className="nav-item">
+            <NavLink className="nav-item nav-link" to="/logout">
+                  Logout
+                </NavLink>
             </li>
         </ul>
             </nav>
