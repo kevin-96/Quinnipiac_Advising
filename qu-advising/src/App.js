@@ -20,6 +20,7 @@ class App extends Component {
     render() {
       const { user } = this.state;
       return (
+
       <React.Fragment>
         <BrowserRouter>
       <Switch>
@@ -32,12 +33,12 @@ class App extends Component {
         <Route path="/logout" component={Logout} />
         <Route path="/" component={LoginPage}></Route>
         <Redirect to="/not-found" />
-        
+
       </Switch>
 
       </BrowserRouter>
       </React.Fragment>
-    
+
  );
 }
  }

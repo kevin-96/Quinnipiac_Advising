@@ -19,6 +19,7 @@ router.get("/", Verify.verifyOrdinaryUser, Verify.verifyAdmin, function (
   });
 });
 
+
 // 3- register a new user on end poitn register, info is sent as a json object
 router.post("/register", function (req, res) {
   user.register(

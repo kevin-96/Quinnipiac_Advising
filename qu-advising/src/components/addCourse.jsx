@@ -4,17 +4,35 @@ import AddedCourses from './addedCourses'
 
 import Footer from "./footer";
 import Navbar from "./navbar";
+import {
+  getStudent,
+} from "../services/userService";
+
+import { addCourse } from "../services/addClassService";
 class CourseAddedDisplay extends Component {
   constructor(props){
     super(props)
-    this.state={addedCourses:[]}
   }
   state = {
     addedCourses: [],
+    student: []
   }
+  async componentDidMount() {
+        //The data needs to come from the Approved courses list
+        const { data } = await getStudent("102513");
+        this.setState({addedCourses:data[0].schedule.courses,student:data[0]});
+        console.log(this.state.student);
+      }
+
   handleClick = (course) => {
-    this.setState({addedCourses: [course,...this.state.addedCourses]})
+    this.setState({addedCourses: [course,...this.state.addedCourses],student:this.state.student})
+    this.handleAdd(course);
   }
+
+  handleAdd = async (course) => {
+    console.log(this.state.student._id)
+    const {data} = await addCourse(course, "102513");
+  };
 
   render() {
     return (
