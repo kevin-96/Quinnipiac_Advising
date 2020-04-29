@@ -9,7 +9,7 @@ import CourseValidatorDisplay from "./components/courseValidatorDisplay";
 import './App.css';
 
  function App() {
-    
+
     return (
       <React.Fragment>
         <BrowserRouter>
@@ -20,12 +20,12 @@ import './App.css';
         <Route path="/not-found" component={NotFound}></Route>
         <Route path="/" component={LoginForm}></Route>
         <Redirect to="/not-found" />
-        
+
       </Switch>
 
       </BrowserRouter>
       </React.Fragment>
-    
+
  );
 }
 
