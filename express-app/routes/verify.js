@@ -3,7 +3,7 @@ var jwt = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var config = require('../config.js');
 
 exports.getToken = function (user) {
-    return jwt.sign(user, config.secretKey, { //sercretkey used here
+    return jwt.sign(user.toJSON(), config.secretKey, { //sercretkey used here
         expiresIn: 3600 //seconds (1hr)
     });
 };
@@ -13,7 +13,7 @@ exports.verifyOrdinaryUser = function (req, res, next) {
 	//retrieve token from one of these places
     var token = req.body.token || req.query.token || req.headers['x-access-token'];
     // decode token
-
+console.log("tOKEN " + token);
     if (token) {
       jwt.verify(token, config.secretKey, function(err, decoded){
         if(err) {

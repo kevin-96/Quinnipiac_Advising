@@ -2,9 +2,10 @@ import { Component } from "react";
 import auth from "../services/authService";
 class Logout extends Component {
   componentDidMount() {
+    console.log("Hello");
     auth.logout();
-    window.location = "/login";
-   
+    window.location = "/";
+    console.log("recieved");
   }
 
   render() {
