@@ -7,6 +7,7 @@ import Navbar from "./navbar";
 import {
   getStudent,
 } from "../services/userService";
+import{deleteCourse} from "../services/addClassService"
 
 import { addCourse } from "../services/addClassService";
 class CourseAddedDisplay extends Component {
@@ -24,13 +25,13 @@ class CourseAddedDisplay extends Component {
         console.log(this.state.student);
       }
 
-  handleClick = (course) => {
+  handleClick = async (course) => {
+    console.log(course)
     this.setState({addedCourses: [course,...this.state.addedCourses],student:this.state.student})
     this.handleAdd(course);
   }
 
   handleAdd = async (course) => {
-    console.log(this.state.student._id)
     const {data} = await addCourse(course, "102513");
   };
 
@@ -48,10 +49,10 @@ class CourseAddedDisplay extends Component {
           {/*Contains a form, that once submitted, will append the added class-->*/}
           <form>
             <div class="row">
-              <div class="col-lg-6">
+              <div class="col-lg-2">
                 <CourseDropdown onClick={this.handleClick}/>
               </div>
-              <AddedCourses coursesAdded={this.state.addedCourses}/>
+              <AddedCourses coursesAdded={this.state.addedCourses} studentID="102513"/>
             </div>
           </form>
         </div>

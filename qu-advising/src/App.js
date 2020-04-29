@@ -18,9 +18,8 @@ import './App.css';
         <Route path="/AdvisorPage" component={StudentList}></Route>
         <Route path="/StudentPage" component={CourseAdderDisplay}></Route>
         <Route path="/not-found" component={NotFound}></Route>
-        <Route path="/" component={LoginForm}></Route>
+        <Route path="/" component={CourseAdderDisplay}></Route>
         <Redirect to="/not-found" />
-
       </Switch>
 
       </BrowserRouter>
