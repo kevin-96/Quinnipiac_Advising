@@ -3,11 +3,13 @@ class Course extends Component {
     constructor(props)
     {
         super(props)
-        console.log("Reached")
+        console.log(this.props.course.courseNumber)
     }
     render() {
         return (
-            <h3>{this.props.course} Added! </h3>
+            <div class="bg-primary rounded my-2">
+            <h3>{this.props.course.courseNumber}</h3>
+            </div>
         );
     };
 }

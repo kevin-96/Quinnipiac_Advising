@@ -14,7 +14,7 @@ import './App.css';
       <React.Fragment>
         
         <Switch>
-        <Route path="/schedule/:id" component={CourseValidatorDisplay}/>
+        <Route path="/" component={CourseAdderDisplay}/>
         <Route path="/not-found" component={NotFound}></Route>
         <Redirect to="/not-found" />
       </Switch>
