@@ -19,12 +19,15 @@ class CourseAddedDisplay extends Component {
     addedCourses: [],
     student: []
   }
+
   async componentDidMount() {
         //The data needs to come from the Approved courses list
-        console.log(getCurrentUser())
-        const { data } = await getStudent();
-        this.setState({addedCourses:data[0].schedule.courses,student:data[0]});
-        console.log(this.state.student);
+        const student = await getCurrentUser();
+
+        console.log(student.id);
+        var dataPre = await getStudent(student.id+"")
+        const data=dataPre.data
+        this.setState({addedCourses:data[0].schedule.courses,student:student});
       }
 
   handleClick = async (course) => {
@@ -54,7 +57,7 @@ class CourseAddedDisplay extends Component {
               <div className="col-lg-2">
                 <CourseDropdown onClick={this.handleClick}/>
               </div>
-              <AddedCourses coursesAdded={this.state.addedCourses} studentID="102513"/>
+              <AddedCourses coursesAdded={this.state.addedCourses} studentID={this.state.student.id}/>
             </div>
           </form>
         </div>
