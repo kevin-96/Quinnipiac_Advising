@@ -12,14 +12,20 @@ class CourseValidatorDisplay extends Component {
         super(props)
     }
     state = {
-        studentCourses: [{courseNumber:"SER420"}],
-        agreedCourses: [{courseNumber:"SER69"}]
+        studentCourses: [],
+        agreedCourses: []
     };
 
     async componentDidMount() {
     //Last step, get advisors schedule
-        const { data } = await getStudent("102513");
-        this.setState({studentCourses:data[0].schedule.courses,agreedCourses:data[0].schedule.courses});
+        //console.log(this.props.location.params.id)
+        var id = this.props.location.state.id
+        var { data } = await getStudent(id);
+        console.log(data)
+        if(data != null){
+            this.setState({studentCourses:data[0].schedule.courses,agreedCourses:data[0].schedule.courses});
+        }
+        
       }
 
     render() {
