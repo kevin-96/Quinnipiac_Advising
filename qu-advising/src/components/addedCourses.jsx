@@ -3,15 +3,23 @@ import Course from './course';
 class AddedCourses extends Component {
     constructor(props) {
         super(props);
-        console.log(props);
-    };
+    }
+    state={
+        coursesAdded:[],
+        studentID:""
+    }
+   async componentDidMount()
+   {
+       console.log(this.props)
+       this.setState({coureseAdded:this.props.coursesAdded,studentID:this.props.studentID});
+   }
     render() {
         return (
-            <div class="col-lg-6 bg-secondary rounded text-center">
-                <h2 class="text-center">Schedule</h2>
-                <ul class="nav flex-column" id="addedClasses">
-                    {this.props.coursesAdded.map((course) => (
-                        <Course course={course}/>
+            <div className="col-lg-10 bg-secondary rounded float-left">
+                <h2>Schedule</h2>
+                <ul id="addedClasses">
+                    {this.props.coursesAdded.map((course,key) => (
+                        <Course key={key} course={course} studentID={this.state.studentID}/>
                     ))}
             </ul>
             </div>

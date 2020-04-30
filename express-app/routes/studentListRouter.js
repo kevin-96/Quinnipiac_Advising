@@ -23,6 +23,12 @@ router.route("/")
 });
 
 router.route("/:userID")
+.get(function(req, res, next) {
+    User.find({"id":req.params.userID},(err, users) => {
+     if(err) throw err;
+     res.json(users)   
+    })    
+})
 //Update User
 .put(function(req,res,next){
     User.findOneAndUpdate({id:req.params.userID},req.body,(err,user)=>{

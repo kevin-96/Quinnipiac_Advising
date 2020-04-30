@@ -26,16 +26,16 @@ class CourseValidatorDisplay extends Component {
         return (
             <div>
             <Navbar/>
-            <div class="jumbotron" id="backgroundImage">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="text-center">Class Validator</h1>
+            <div className="jumbotron" id="backgroundImage">
+        <div className="container">
+            <div className="row">
+                <div className="col-lg-12">
+                    <h1 className="text-center">Class Validator</h1>
                 </div>
             </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <table class="table">
+                <div className="row">
+                    <div className="col-lg-12">
+                        <table className="table">
                             <thead>
                                 <tr>
                                     <th scope="col">Classes Agreed Upon</th>
