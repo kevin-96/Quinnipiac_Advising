@@ -8,17 +8,7 @@ class Table extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            students: [
-               { id: 1, name: 'Brian ', major: 'Software Engineering', year: 'Junior', valid: true},
-               { id: 2, name: 'Brian Carballo', major: 'Software Engineering', year: 'Junior', valid: true },
-               { id: 3, name: 'Brian ', major: 'Software Engineering', year: 'Junior', valid: true},
-               { id: 4, name: 'Brian Carballo', major: 'Software Engineering', year: 'Junior', valid: true},
-               { id: 4, name: 'Brian Carballo', major: 'Software Engineering', year: 'Junior', valid: true},
-               { id: 4, name: 'Brian Carballo', major: 'Software Engineering', year: 'Junior', valid: true},
-               { id: 4, name: 'Brian Carballo', major: 'Software Engineering', year: 'Junior', valid: false},
-               { id: 4, name: 'Brian Carballo', major: 'Software Engineering', year: 'Junior', valid: true},
-              
-            ],
+            students:[102513,102030],
             users: []
          }
     }
@@ -26,14 +16,15 @@ class Table extends Component {
     async componentDidMount() {
       //The data needs to come from the Approved courses list
       const { data } = await getUsers();
-      this.setState({users: data});
+      this.setState({users: data, //students:user.advisees
+      });
       console.log(this.state);
     }
 
     renderTableData() {
         return this.state.users.map((student, index) => {
            const {firstName,lastName,username,id} = student 
-           //if(valid){
+           if(this.state.students.includes(id)){
             return (
                <tr style={{backgroundColor:"white"}}>
                   <td> <Link to={`/AdvisorPage/validator`}>{firstName + " " + lastName} </Link></td>
@@ -41,7 +32,7 @@ class Table extends Component {
                   <td>{id}</td>
                </tr>
             )
-           //}
+           }
          //   else {
          //      return (
          //       <tr style={{backgroundColor:"red"}}>
