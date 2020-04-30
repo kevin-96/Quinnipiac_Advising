@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { deleteCourse } from "../services/addClassService"
+import{getCurrentUser} from "../services/authService"
 class Course extends Component {
     constructor(props) {
         super(props)
@@ -9,8 +10,10 @@ class Course extends Component {
         isLiving: true
     }
     handleDelete = async (course) => {
+        const student = await getCurrentUser();
+        console.log(student.id);
         try {
-          await deleteCourse("102513",course.courseNumber);
+          await deleteCourse(student.id,course.courseNumber);
           this.setState({ isLiving: false })
         } catch (ex) {
           console.log("delete exception");

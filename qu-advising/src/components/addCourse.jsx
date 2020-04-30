@@ -37,7 +37,7 @@ class CourseAddedDisplay extends Component {
   }
 
   handleAdd = async (course) => {
-    const {data} = await addCourse(course, "102513");
+    const {data} = await addCourse(course, this.state.student.id);
   };
 
   render() {
@@ -57,7 +57,7 @@ class CourseAddedDisplay extends Component {
               <div className="col-lg-2">
                 <CourseDropdown onClick={this.handleClick}/>
               </div>
-              <AddedCourses coursesAdded={this.state.addedCourses} studentID={this.state.student.id}/>
+              <AddedCourses coursesAdded={this.state.addedCourses} studentID={this.state.student.id+""}/>
             </div>
           </form>
         </div>

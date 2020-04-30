@@ -11,7 +11,10 @@ class CourseDropdown extends Component {
     };
     state =
         {
-            courses: [],
+            courses: [{courseName: "English",courseNumber: "ENG101",instructor:"Siggy" ,numCredit: "3",semesterOffered: "Fall"
+                },{courseName: "Chemistry",courseNumber: "CHE201",instructor:"Mandel" ,numCredit: "3",semesterOffered: "Spring"
+            },{courseName: "Math",courseNumber: "MA303",instructor:"Massimo" ,numCredit: "3",semesterOffered: "Spring"
+        }],
             selectedCourse: {}
         };
 
@@ -28,7 +31,7 @@ class CourseDropdown extends Component {
         console.log(student.id);
         var dataPre = await getStudent(student.id + "")
         const data = dataPre.data
-        this.setState({ courses: data[0].schedule.courses, selectedCourse: data[0].schedule.courses[0] })
+        this.setState({ courses: [...this.state.courses,...data[0].schedule.courses], selectedCourse: data[0].schedule.courses[0] })
     }
 
 
