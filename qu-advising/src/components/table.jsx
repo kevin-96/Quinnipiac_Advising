@@ -49,7 +49,12 @@ class Table extends Component {
          if(true){
          return (
             <tr style={{ backgroundColor: "white" }}>
-               <td> <Link to={`/AdvisorPage/validator`}>{firstName + " " + lastName} </Link></td>
+               <td> <Link  to={{
+                  pathname:`/AdvisorPage/validator`,
+                  state: {
+                    id: id
+                  },
+               }} params = {id} >{firstName + " " + lastName} </Link></td>
                <td>{username}</td>
                <td>{id}</td>
             </tr>
