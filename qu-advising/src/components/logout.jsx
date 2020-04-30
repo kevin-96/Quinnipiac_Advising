@@ -3,7 +3,7 @@ import auth from "../services/authService";
 class Logout extends Component {
   async componentDidMount() {
     auth.logout();
-    window.location = "/";
+    window.location.href = "http://localhost:3000";
     console.log("recieved");
   }
 

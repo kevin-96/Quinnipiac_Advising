@@ -22,7 +22,7 @@ export function loginWithJwt(jwt) {
 export async function logout() {
   const respond = await http.get(apiEndpoint + "logout");
   console.log(respond);
-  localStorage.removeItem(tokenKey);
+  localStorage.clear();
 }
 
 export function getCurrentUser() {
