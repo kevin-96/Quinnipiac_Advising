@@ -15,11 +15,10 @@ class LoginForm extends Form {
     password: Joi.string().required().label("Password"),
   };
 
-  doSubmit = async () => {
+  doSubmit = async (response) => {
     try {
       const { data } = this.state;
       await auth.login(data.username, data.password);
-      // auth.loginWithJwt(response.headers["x-access-token"]);
       const { state } = this.props.location;
       window.location = state ? state.from.pathname : "/";
     } catch (ex) {

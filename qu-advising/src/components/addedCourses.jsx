@@ -15,7 +15,7 @@ class AddedCourses extends Component {
    }
     render() {
         return (
-            <div class="col-lg-10 bg-secondary rounded float-left">
+            <div className="col-lg-10 bg-secondary rounded float-left">
                 <h2>Schedule</h2>
                 <ul id="addedClasses">
                     {this.props.coursesAdded.map((course,key) => (

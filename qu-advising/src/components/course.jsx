@@ -23,24 +23,24 @@ class Course extends Component {
     render() {
         if (this.state.isLiving) {
             return (
-                <div class="bg-primary rounded my-2 px-auto py-3 d-flex flex-row  ">
-                    <div class="col-2 my-auto bg-warning rounded">
+                <div className="bg-primary rounded my-2 px-auto py-3 d-flex flex-row  ">
+                    <div className="col-2 my-auto bg-warning rounded">
                     <span>{this.props.course.courseName}</span>
                     </div>
-                    <div class="col-2 my-auto">
+                    <div className="col-2 my-auto">
                     <span >{this.props.course.courseNumber}</span>
                     </div>
-                    <div class="col-2 my-auto">
+                    <div className="col-2 my-auto">
                     <span >{this.props.course.instructor}</span>
                     </div>
-                    <div class="col-2 my-auto">
+                    <div className="col-2 my-auto">
                     <span >Credits:{this.props.course.numCredit}</span>
                     </div>
-                    <div class="col-2 my-auto">
+                    <div className="col-2 my-auto">
                     <span >{this.props.course.semesterOffered}</span>
                     </div>
-                    <div class="col-2 my-auto">
-                    <button class="btn btn-danger mb-2 my-auto "  type="button" onClick={() => {
+                    <div className="col-2 my-auto">
+                    <button className="btn btn-danger mb-2 my-auto "  type="button" onClick={() => {
                   this.handleDelete(this.props.course);
                 }}
                     >Delete</button>

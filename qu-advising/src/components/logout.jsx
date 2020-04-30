@@ -1,8 +1,7 @@
 import { Component } from "react";
 import auth from "../services/authService";
 class Logout extends Component {
-  componentDidMount() {
-    console.log("Hello");
+  async componentDidMount() {
     auth.logout();
     window.location = "/";
     console.log("recieved");
