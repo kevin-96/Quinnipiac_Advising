@@ -23,7 +23,6 @@ class CourseDropdown extends Component {
         const selectedCourse = this.state.courses.filter(course => course.courseNumber == val);
         this.setState({ selectedCourse: selectedCourse[0] });
     }
-
     async componentDidMount() {
         //Last step, get advisors schedule
         const student = await getCurrentUser();
