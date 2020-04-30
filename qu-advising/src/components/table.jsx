@@ -46,7 +46,7 @@ class Table extends Component {
    renderTableData() {
       return this.state.users.map((student, index) => {
          const { firstName, lastName, username, id } = student
-         if(true){
+         if(this.props.advisees.includes(id.toString())){
          return (
             <tr style={{ backgroundColor: "white" }}>
                <td> <Link  to={{
