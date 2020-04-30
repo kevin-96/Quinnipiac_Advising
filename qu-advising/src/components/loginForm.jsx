@@ -4,6 +4,7 @@ import Joi from "joi-browser";
 import Form from "../common/form";
 import auth from "../services/authService";
 
+
 class LoginForm extends Form {
   state = {
     data: { username: "", password: "" },
@@ -17,10 +18,21 @@ class LoginForm extends Form {
 
   doSubmit = async (response) => {
     try {
+      
       const { data } = this.state;
       await auth.login(data.username, data.password);
-      const { state } = this.props.location;
-      window.location = state ? state.from.pathname : "/";
+      const user=auth.getCurrentUser();
+      const isStudent=user.isStudent
+      console.log(isStudent);
+      //const { state } = this.props.location;
+      if(isStudent==true)
+      {
+        window.location="/StudentPage"
+      }
+      else{
+        window.location="/AdvisorPage"
+      }
+
     } catch (ex) {
       if (ex.response && ex.response.status === 400) {
         const errors = { ...this.state.errors };

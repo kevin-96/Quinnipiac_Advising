@@ -33,7 +33,7 @@ class App extends Component {
 
             <Route path="/register" component={RegisterForm}></Route>
             <Route path="/AdvisorPage/Validator" component={CourseValidatorDisplay}></Route>
-            <Route path="/AdvisorPage" component={CourseAddedDisplay}></Route>
+            <Route path="/AdvisorPage" component={StudentList}></Route>
             <Route path="/StudentPage" component={CourseAdderDisplay}></Route>
             <Route path="/not-found" component={NotFound}></Route>
             <Route path="/logout" component={Logout} />
