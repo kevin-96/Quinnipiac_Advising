@@ -9,5 +9,8 @@ export function register(user) {
     password: user.password,
     lastname: user.lastname,
     firstname: user.firstname,
-  });
+    id: user.id,
+    isStudent: true
+  })
+    
 }
